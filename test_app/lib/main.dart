@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:test_app/home_page.dart';
 import 'package:test_app/profile_page.dart';
+import 'package:test_app/posts_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +32,7 @@ class _RootPageState extends State<RootPage> {
   List<Widget> pages = const [
     HomePage(),
     ProfilePage(),
+    PostsPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -49,6 +51,7 @@ class _RootPageState extends State<RootPage> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: "Home"),
           NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+          NavigationDestination(icon: Icon(Icons.post_add), label: "Posts"),
         ],
         onDestinationSelected: (int index) {
           setState(() {
